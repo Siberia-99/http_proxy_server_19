@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="parcer_request.hpp" />
     <ClInclude Include="Parser.hpp" />
     <ClInclude Include="socket_wrap.hpp" />
     <ClInclude Include="socket_wrap_client.hpp" />
@@ -156,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="http_proxy_server.cpp" />
+    <ClCompile Include="parcer_request.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="socket_wrap.cpp" />
     <ClCompile Include="socket_wrap_client.cpp" />
