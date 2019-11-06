@@ -43,7 +43,7 @@ SOCKET socket_wrap::create_socket()
 	return(_socket);
 }
 
-int socket_wrap::send_message(SOCKET _socket, const char FAR *_buf, int _len, int _flags)
+int socket_wrap::send_message(SOCKET _socket, const char*_buf, int _len, int _flags)
 {
 	//Для того что бы послать данные используем функцию send
 	if (SOCKET_ERROR == send(_socket, _buf, _len,_flags))
@@ -54,7 +54,7 @@ int socket_wrap::send_message(SOCKET _socket, const char FAR *_buf, int _len, in
 	return 0;
 }
 
-int socket_wrap::recv_message(SOCKET _socket, char FAR *_buf, int _len, int _flags)
+int socket_wrap::recv_message(SOCKET _socket, char *_buf, int _len, int _flags)
 {
 	int len;
 	if (SOCKET_ERROR == (len = recv(_socket, _buf, _len, _flags)))
@@ -75,7 +75,7 @@ int socket_wrap::close_socket(SOCKET _socket)
 	return 0;
 }
 
-int socket_wrap::bind_struct_with_socket(SOCKET _socket, const struct sockaddr FAR *_addr, int _namelen)
+int socket_wrap::bind_struct_with_socket(SOCKET _socket, const struct sockaddr *_addr, int _namelen)
 {
 	if (bind(_socket, _addr, _namelen) == SOCKET_ERROR)
 	{

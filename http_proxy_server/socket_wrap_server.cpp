@@ -18,7 +18,7 @@ hostent * socket_wrap_server::return_IP_requested_host(const char * _host)
 	return hn;
 }
 
-int socket_wrap_server::connect_with_server(SOCKET _socket, const struct sockaddr FAR *_name, int _namelen)
+int socket_wrap_server::connect_with_server(SOCKET _socket, const struct sockaddr *_name, int _namelen)
 {
 	if (SOCKET_ERROR == connect(_socket, _name, _namelen))
 	{
