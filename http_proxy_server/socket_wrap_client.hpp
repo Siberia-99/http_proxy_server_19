@@ -11,7 +11,7 @@ class socket_wrap_client
 public:
 	socket_wrap_client();
 	~socket_wrap_client();
-	SOCKET accept_message(SOCKET _socket,struct sockaddr FAR *_addr,int FAR *_addrlen);
+	SOCKET accept_message(SOCKET _socket,struct sockaddr *_addr,int *_addrlen);
 };
 
 
