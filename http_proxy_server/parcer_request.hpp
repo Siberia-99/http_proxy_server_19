@@ -33,26 +33,31 @@ struct dataRequest { //Request-Line [ General-Header | Request-Header | Entity-H
 	std::string ContentEncoding;
 	int ContentLength;//"Content-Length: 26457\n".
 	std::string ContentType;//"Content-Type: text/html\n"
+	std::string ContentDisposition;
 	DateType Expires;//"Expires: date\n". Формат даты алогичен формату даты для параметра Date  - когда должна быть удалена из кэша
 	DateType LastModified; //время последнего изменения пересылаемых данных
 	std::string ExtentionHeader; //"ParameterName: parametervalue\n". Данные параметры будут игнорироваться, если программа-клиент не знает, как их обработать.Например: "Cookie: r=1\r\n"  устанавливает всем известные печеньки для страницы.
 	std::string Cookie;
 };
-int minParsing(int a1, int a2);
+size_t minParsing(size_t a1, size_t a2);
 
-class ParserRequest //GET http://www.php.net/ HTTP/1.0\r\n\r\n 
+class parcerRequest //GET http://www.php.net/ HTTP/1.0\r\n\r\n 
 {
 public:
-	ParserRequest(std::string url);
-	//~ParserRequest();
+	parcerRequest(std::string url);
+	//~parcerRequest();
 	void getMethod();
 	bool getDate();
 	bool getRequestURL();
+	bool getContentType();
+	bool getContentDisposition();
 	bool getContentLength();
 	bool getReferer();
 	bool getHost();
 	bool getCookie();
 	bool getHTTPVersion();
+	void parceAll();
+	bool getData();
 private:
 	dataRequest _data;
 	std::string _url;
