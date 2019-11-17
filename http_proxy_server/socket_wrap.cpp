@@ -81,7 +81,8 @@ int socket_wrap::bind_struct_with_socket(SOCKET _socket, const struct sockaddr *
 	{
 		cout << "Error in BIND(): " << WSAGetLastError() << endl;
 		WSACleanup();
-		return 1;
+		throw runtime_error("Error with BIND lox!");
+		//return 1;
 	}
 	return 0;
 }
