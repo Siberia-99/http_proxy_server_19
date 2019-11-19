@@ -1,15 +1,15 @@
 #include "stdafx.h"
-#include "Parser.hpp"
+#include "Parcer.hpp"
 
-Parser::Parser()
+parcer::parcer()
 {
 }
 
-Parser::~Parser()
+parcer::~parcer()
 {
 }
 
-void Parser::parse_request(string _request)
+void parcer::parse_request(string _request)
 {
 	size_t i = _request.find("://");
 	if (i != string::npos)

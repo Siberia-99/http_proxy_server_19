@@ -5,15 +5,15 @@
 #include <iostream>
 using namespace std;
 
-class Parser
+class parcer
 {
 public:
 	int type;
 	string protocol;
 	string host;
 	string path;
-	Parser();
-	~Parser();
+	parcer();
+	~parcer();
 	void parse_request(string _request);
 };
 
