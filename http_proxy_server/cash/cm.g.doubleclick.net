@@ -1,0 +1,17 @@
+HTTP/1.1 302 Found
+Location: https://cm.g.doubleclick.net/pixel?google_nid=agentstvo_sape_limited&google_hm=R_PJw1iD1VyDBIlJAoysCQ
+Date: Thu, 12 Dec 2019 20:07:32 GMT
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Server: HTTP server (unknown)
+Content-Length: 302
+X-XSS-Protection: 0
+
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>302 Moved</TITLE></HEAD><BODY>
+<H1>302 Moved</H1>
+The document has moved
+<A HREF="https://cm.g.doubleclick.net/pixel?google_nid=agentstvo_sape_limited&amp;google_hm=R_PJw1iD1VyDBIlJAoysCQ">here</A>.
+</BODY></HTML>

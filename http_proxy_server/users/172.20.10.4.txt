@@ -1,0 +1,3 @@
+id user: 172.20.10.4
+Volume data to server: 201
+Volume data from server: 0

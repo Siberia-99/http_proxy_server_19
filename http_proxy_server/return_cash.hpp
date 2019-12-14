@@ -15,6 +15,7 @@ public:
 	string return_file_from_directory(string _fileName);
 	bool check_in_cash(string _host);
 	HANDLE return_handle(string _host);
+	BOOL use_cash(HANDLE _readFile, SOCKET &_clientSocket);
 private:
 
 };

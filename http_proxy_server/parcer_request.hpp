@@ -58,6 +58,7 @@ public:
 	bool getHTTPVersion();
 	void parceAll();
 	bool getData();
+	dataRequest getInformation();
 private:
 	dataRequest _data;
 	std::string _url;

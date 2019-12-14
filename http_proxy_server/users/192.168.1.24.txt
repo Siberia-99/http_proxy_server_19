@@ -1,0 +1,3 @@
+id user: 192.168.1.24
+Volume data to server: 1263
+Volume data from server: 4607

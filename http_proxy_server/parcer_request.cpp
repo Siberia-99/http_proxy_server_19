@@ -14,6 +14,9 @@ size_t minParsing(size_t a1, size_t a2) {
 parcerRequest::parcerRequest(string url) {
 	_url = url; dataRequest _data; 
 }
+dataRequest parcerRequest::getInformation() {
+	return _data;
+}
 void parcerRequest::getMethod() {
 	size_t index = _url.find(" ");
 	_data.Method = string(_url, 0, index);
@@ -39,7 +42,7 @@ bool parcerRequest::getRequestURL() {
 	return 1;
 }
 bool parcerRequest::getContentLength() {
-	size_t index = _url.find("Content-Length") + 18;
+	size_t index = _url.find("Content-Length") + 16;
 	if (index < 0) return 0;
 	string s = string(_url, index);
 	index = s.find("\r");
@@ -49,7 +52,7 @@ bool parcerRequest::getContentLength() {
 	return 1;
 }
 bool parcerRequest::getContentType() {
-	size_t index = _url.find("Content-Type") + 16;
+	size_t index = _url.find("Content-Type") + 14;
 	if (index < 0) return 0;
 	string s = string(_url, index);
 	index = s.find("\r");
